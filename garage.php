@@ -44,9 +44,9 @@ if ($switch == 1) {
 ?>
 <?php
 if ($trigger == 0) {
-	echo "<li><a href='/garage.php?trigger=1'><img src=\"img/remote-background.jpg\" width=\"20\" height=\"17\"> Open/Close Door</a></li>";
+	echo "<li><a href='/garage.php?trigger=1'><img src=\"img/remote-background.png\" width=\"20\" height=\"17\"> Open/Close Door</a></li>";
 } else {
-	echo "<li><a href='/garage.php'><img src=\"img/remote-background.jpg\" width=\"20\" height=\"17\"> Open/Close Door</a></li>";
+	echo "<li><a href='/garage.php'><img src=\"img/remote-background.png\" width=\"20\" height=\"17\"> Open/Close Door</a></li>";
 }
 ?>
 			<li><a href="/manual.pdf">Garage Door Opener Manual</a></li>
