@@ -49,7 +49,7 @@ if ($trigger == 0) {
 	echo "<li><a href='/garage.php'><img src=\"img/remote-background.png\" width=\"20\" height=\"17\"> Open/Close Door</a></li>";
 }
 ?>
-			<li><a href="/manual.pdf">Garage Door Opener Manual<xx class="value">></xx></a></li>
+			<li><a href="/GarageDoor.pdf">Garage Door Opener Manual<xx class="value">></xx></a></li>
 			<li><a href="http://www.instructables.com/id/Garage-Door-Opener-2/">Garage Door Opener Instructable<xx class="value">></xx></a></li>
 		</ul>
 	</nav>
