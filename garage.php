@@ -50,6 +50,7 @@ if ($trigger == 0) {
 }
 ?>
 			<li><a href="/manual.pdf">Garage Door Opener Manual</a></li>
+			<li><a href="http://www.instructables.com/id/Garage-Door-Opener-2/">Garage Door Opener Instructable</a></li>
 		</ul>
 	</nav>
 	</div>
