@@ -1,0 +1,386 @@
+/* CSS for a website on a raspberry pi device. Every raspberry pi device
+ * must have a simple, consistent web interface that is accessible from a
+ * laptop or a smart phone. 
+ *
+ * Accordion menus fit nicely on a smart phone, laptop or pad. Accordion
+ * menus can expand (+) to show more detail and options or collapse (-) 
+ * to hide detail, or can link to another menu or website (>).
+ *
+ * The goal is to provide accordion menus similar to those provided by 
+ * OpenSprinkler and a website that is similar to OpenHab menus.
+ *
+ * I don't want to work on the look-and-feel of the website ever. My 
+ * comments may be a bit over the top. I have learned and forgotten CSS
+ * multiple times. I use it infrequently. I look up each setting in 
+ * w3schools.com.
+ *
+ * Also, I won't remember why I applied a certain setting to a particular
+ * html element. So, selector class names should be descriptive enough to 
+ * a tie a class to a particular type of html element without flipping 
+ * back and forth between the html and css files.
+ */
+
+/* Sources
+ * http://www.cssscript.com/multilevel-accordion-menu-with-plain-html-css/
+ * http://www.w3schools.com/howto/howto_js_accordion.asp
+ *
+ * I don't want to rely on styles or css stored on the net.
+ */
+
+/* Color pallette
+ * darkest blue 092763
+ * header background dark blue 195689
+ * medium blue 5C98C0
+ * body background pale blue 94C2DC
+ * menu hoover very light blue CCECF9
+ */
+
+/* Class site-header-div defines look and feel of the header content */
+.site-header-div {
+	/* position of header relative to the window */
+	position: relative;
+
+	/* use the full width of the header */
+	width:100%;
+
+	/* header background: black = #195689 */
+	background: #195689;
+
+	/* In CSS, from outside in, the order is: outline, margin, border, padding, content */
+		/* outline */
+		    outline: none;
+
+		/* margin */
+			/* margin is clear space outside the border */
+			/* right + left + width should equal 100%
+			/* margin: top, right, bottom, left */
+			margin: 0px 0px 20px 0px;
+
+		/* border */
+		    border: none;
+
+		/* padding */
+			/* padding is clear space within the border */
+			/* top, right, bottom, left */
+			padding: 15px 0px 15px 0px;
+	
+		/* content */
+			/* header text color: white #ffffff; */
+			color: #ffffff;
+
+			/* ??? w3 recommends using em for font-size and not size (large, medium, ...) or px */
+			/* font: font-style font-variant font-weight font-size/line-height font-family */
+			/* font-style: normal, italic, oblique */
+			/* font-variant: normal, small-caps */
+			/* font-weight: normal, bold */
+			font-weight: bold;
+			font-size: 120%;
+			font-family: Helvetica;
+			
+			/* align footer text */
+			text-align: center;
+
+	/* sets the time to change from one state to another when hovering 
+	 * transition property = all
+	 * transition duration = 0.15 seconds, or time to complete
+	 * transition timing effect = linear
+	 */
+	transition:all linear 0.15s;
+}
+
+.site-header-icon {
+	width:30px;
+	height:30px;
+
+	/* align with left border */
+	float:left;
+
+	/* margin is clear space outside the icon */
+	/* margin: top, right, bottom, left */
+	margin: 0px 0px 0px 20px;
+
+	/* padding is clear space within the icon */
+	/* top, right, bottom, left */
+	padding: 0px 0px 0px 0px;
+}
+
+.site-header-text {
+	/* ??? w3 recommends using em for font-size and not size (large, medium, ...) or px */
+	/* font: font-style font-variant font-weight font-size/line-height font-family */
+	font-weight: bold;
+	font-size: 120%;
+	font-family: Helvetica;
+
+	/* text-decoration: none - prevents an underline beneath the logo */
+	text-decoration: none;
+
+	/* white = #ffffff */
+	color: #ffffff;
+}
+
+/* when hovering over the logo change colors */
+.site-header-text:hover {
+	/* text-decoration: none - prevents an underline beneath the logo when hovering */
+	text-decoration: none;
+
+	/* light blue = #CCECF9 */
+	color: #CCECF9;
+}
+
+.site-header-menu {
+	width:30px;
+	height:30px;
+
+	/* align with right border */
+	float:right;
+
+	/* margin is clear space outside the icon */
+	/* margin: top, right, bottom, left */
+	margin: 0px 10px 0px 0px;
+
+	/* padding is clear space within the icon */
+	/* top, right, bottom, left */
+	padding: 0px 0px 0px 0px;
+}
+
+/* eliminates margin around the page */
+*, *:before, *:after {
+	/* In CSS, from outside in, the order is: outline, margin, border, padding, content */
+	/* margin/padding: top, right, bottom, left */
+	outline: none;
+	margin: 0px 0px 0px 0px;
+	border: none;
+	padding: 0px 0px 0px 0px;
+}
+
+
+/* reset css */
+applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	
+	border: 0;
+	/* round the edges of the menu entries */
+	border-radius:5px;
+
+	padding: 0;
+
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+div {
+	/* width of button */
+   	width: 90%;
+	/* margin is clear space outside the border */
+	/* right + left + width should equal 100%
+	/* margin: top, right, bottom, left */
+	margin: 0px 5% 0px 5%;
+	border: 0;
+	border-radius:5px;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html, body {
+	/* width of button */
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+	display: block;
+}
+
+body { 
+	line-height: 1;
+}
+
+ol, ul { 
+	list-style: none; 
+}
+
+blockquote, q { 
+	quotes: none; 
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+	font-size: 100%;
+	font-family: Helvetica;
+
+	/* darker blue background #3366ff */
+	background-color:#94C2DC;	
+}
+
+a {
+	text-decoration: none; 
+}
+
+/* Styling top level items */
+.nav a, .nav label {
+	display: block;
+	padding: 15px;
+
+	/* text color: black #000000; */
+	color: #000000; 
+
+	/* menu background white = #ffffff */
+	background: #ffffff;
+
+	/* box-shadow: black #000000; */
+	box-shadow: inset 0 -1px #000000;
+	-webkit-transition: all .25s ease-in;
+	transition: all .25s ease-in;
+}
+
+/* If cursor focuses or hovers over a menu item, then change the background color */
+.nav a:focus, .nav a:hover, .nav label:focus, .nav label:hover {
+	/* text color: black #000000; */
+	color: #000000; 
+
+	/* menu background sky blue = #CCECF9 */
+	background-color:#CCECF9; 
+}
+
+.nav label { 
+	cursor: pointer; 
+}
+
+/* Styling first level lists items */
+.group-list a, .group-list label {
+	padding-left: 30px;
+
+	/* menu background white = #ffffff */
+	background: #ffffff;
+
+	box-shadow: inset 0 -1px #000000;
+}
+
+/* If cursor focuses or hovers over a menu item, then change the background color */
+.group-list a:focus, .group-list a:hover, .group-list label:focus, .group-list label:hover { 
+	/* menu background sky blue = #CCECF9 */
+	background-color:#CCECF9; 
+}
+
+/* Styling second level list items */
+.sub-group-list a, .sub-group-list label {
+	padding-left: 45px;
+
+	/* menu background white = #ffffff */
+	background: #ffffff;
+
+	/* box-shadow color: black = #000000 */
+	box-shadow: inset 0 -1px #000000;
+}
+
+/* If cursor focuses or hovers over a menu item, then change the background color */
+.sub-group-list a:focus, .sub-group-list a:hover, .sub-group-list label:focus, .sub-group-list label:hover { 
+	/* menu background sky blue = #CCECF9 */
+	background-color:#CCECF9; 
+}
+
+/* Styling third level list items */
+.sub-sub-group-list a, .sub-sub-group-list label {
+	padding-left: 60px;
+
+	/* menu background white = #ffffff */
+	background: #ffffff;
+
+	/* box-shadow color: black = #000000 */
+	box-shadow: inset 0 -1px #000000;
+}
+
+/* If cursor focuses or hovers over a menu item, then change the background color */
+.sub-sub-group-list a:focus, .sub-sub-group-list a:hover, .sub-sub-group-list label:focus, .sub-sub-group-list label:hover { 
+	/* menu background sky blue = #CCECF9 */
+	background-color:#CCECF9; 
+}
+
+/* Hide submenus by making max-height = 0 */
+.group-list, .sub-group-list, .sub-sub-group-list {
+	height: 100%;
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: max-height .5s ease-in-out;
+	transition: max-height .5s ease-in-out;
+}
+
+/* If a menu is opened, then reset the hieght of the menu */
+.nav__list input[type=checkbox]:checked + label + ul { 
+	/* reset the height when checkbox is checked */
+	max-height: 1000px; 
+}
+
+/* Put a value on the right-side of the item */
+.value {
+	/* font */
+    font-weight: normal;
+    font-size: 100%; 
+
+	/* text color: black #000000; */
+	color: #000000; 
+
+	/* align text to right */
+    float: right;
+
+    /* clear space outside border */
+    margin-left: 5px;
+
+	/* no border */
+    border: 0px;
+}
+
+/* After a navigation label, add a "+" on the right side of a menu item */
+.nav label:after {
+	/* plus (+) */
+    content: '+';
+
+	/* font */
+    font-weight: bold;
+    font-size: 100%; 
+
+	/* text color: black #000000; */
+	color: #000000; 
+
+	/* align text to right */
+    float: right;
+
+    /* clear space outside border */
+    margin-left: 5px;
+}
+
+/* If the menu is expanded then switch the "+" to a "-" on the right side of the menu item */
+.nav__list input[type=checkbox]:checked + label:after {
+	/* plus (-) */
+    content: '-';
+
+	/* font */
+    font-weight: bold;
+   	font-size: 100%; 
+
+	/* text color: black #000000; */
+	color: #000000; 
+
+	/* align text to right */
+    float: right;
+
+    /* clear space outside border */
+    margin-left: 5px;
+}

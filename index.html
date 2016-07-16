@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Accordion Menu</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<!--
+	Goals:	
+		+ Multi-level, vertical accordion menu for Raspberry Pi applications 
+		  using only CSS and HTML. 
+		+ Support laptop (chrome, firefox, IE, safari), android and iphone.
+		+ Working examples of multiple types of menu items
+		+ CSS should be relatively stagnant, in that it doesn't require changes
+		  to support raspberry pi projects
+
+	Sources
+		http://www.cssscript.com/multilevel-accordion-menu-with-plain-html-css/
+		http://www.w3schools.com/howto/howto_js_accordion.asp
+
+	Description and right float toggle on/off 
+
+	DONE: Icon and Menu and +/-
+	DONE: Icon & Sub-menu and +/-
+	DONE: Description only 
+	DONE: Icon and Description 
+	DONE: Description and link with right float >
+	DONE: Icon and Description and link with right float >
+	DONE: Description and right float status/value
+	DONE: Menu and +/-
+	DONE: Sub-menu and +/-
+-->	
+<body>
+	<div class="site-header-div">
+		<div class="site-header-table">
+			<td><img class="site-header-icon" src="img/raspberry-pi.png" ></td>
+			<td><a class="site-header-text" href="http://www.instructables.com">Accordion Menu</a></td>
+			<td><img class="site-header-menu" src="img/menu-icon.png"></td>
+		</div> 
+	</div>
+	
+	<div>
+	<nav class="nav" role="navigation">
+		<ul class="nav__list">
+			<li>
+				<input id="group-1" type="checkbox" hidden />
+				<label for="group-1"><img src="img/tv.png" width="20" height="17"> 1st level menu</label>
+				<ul class="group-list">
+					<li><a href="#"><img src="img/tv.png" width="20" height="17"> 2nd level TV icon</a></li>
+					<li><a href="http://www.google.com"><img src="img/tv.png" width="20" height="17"> 2nd level TV icon<xx class="value">></xx></a></li>
+					<li>
+						<input id="sub-group-1" type="checkbox" hidden />
+						<label for="sub-group-1"><img src="img/tv.png" width="20" height="17"> 2nd level menu</label>
+						<ul class="sub-group-list">
+							<li><a href="#">3rd level item</a></li>
+							<li><a href="#">3rd level item</a></li>
+							<li><a href="#">3rd level item</a></li>
+							<li>
+								<input id="sub-sub-group-1" type="checkbox" hidden />
+								<label for="sub-sub-group-1"> 3rd level menu</label>
+								<ul class="sub-sub-group-list">
+									<li><a href="#">4th level item</a></li>
+									<li><a href="#">4th level item</a></li>
+									<li><a href="#">4th level item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="#">1st level value<xx class="value">value</xx></a></li>
+			<li><a href="http://www.google.com">1st level link<xx class="value">></xx></a></li>
+			<li>
+				<input id="group-2" type="checkbox" hidden />
+				<label for="group-2"> 1st level menu</label>
+				<ul class="group-list">
+					<li>
+						<li><a href="#">2nd level item</a></li>
+						<li><a href="#">2nd level item</a></li>
+						<input id="sub-group-2" type="checkbox" hidden />
+						<label for="sub-group-2"> 2nd level menu</label>
+						<ul class="sub-group-list">
+							<li><a href="#">3rd level item</a></li>
+							<li><a href="#">3rd level item</a></li>
+							<li>
+								<input id="sub-sub-group-2" type="checkbox" hidden />
+								<label for="sub-sub-group-2"> 3rd level menu</label>
+								<ul class="sub-sub-group-list">
+									<li><a href="#">4th level item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input id="group-3" type="checkbox" hidden />
+				<label for="group-3"> 1st level menu</label>
+				<ul class="group-list">
+					<li>
+						<li><a href="#">2nd level item</a></li>
+						<li><a href="#">2nd level item</a></li>
+						<input id="sub-group-3" type="checkbox" hidden />
+						<label for="sub-group-3"> 2nd level menu</label>
+						<ul class="sub-group-list">
+							<li><a href="#">3rd level item</a></li>
+							<li><a href="#">3rd level item</a></li>
+							<li><a href="#">3rd level item</a></li>
+							<li>
+								<input id="sub-sub-group-3" type="checkbox" hidden />
+								<label for="sub-sub-group-3"> 3rd level menu</label>
+								<ul class="sub-sub-group-list">
+									<li><a href="#">4th level item</a></li>
+									<li><a href="#">4th level item</a></li>
+									<li><a href="#">4th level item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input id="group-4" type="checkbox" hidden />
+				<label for="group-4"> 1st level menu</label>
+				<ul class="group-list">
+					<li>
+						<li><a href="#">2nd level item</a></li>
+						<input id="sub-group-4" type="checkbox" hidden />
+						<label for="sub-group-4"> 2nd level menu</label>
+						<ul class="sub-group-list">
+							<li><a href="#">3rd level item</a></li>
+							<li><a href="#">3rd level item</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	</div>
+	<!-- A footer is not recommended because the expanding menus can go beyond footer -->
+</body>
+</html>
