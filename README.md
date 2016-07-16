@@ -14,4 +14,4 @@ Download index.html goes in any directory. On a linux system, download to /var/w
 <li><a href="http://www.w3schools.com/css/default.asp">W3Schools CSS</a></li>
 <li><a href="http://www.w3schools.com/html/default.asp">W3Schools HTML</a></li></ul>
 
-I created an instructable for the menu
+I created an <a href="http://www.instructables.com/id/Accordion-Menu/">instructable</a> for the menu
