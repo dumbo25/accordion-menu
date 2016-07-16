@@ -4,7 +4,7 @@ Multi-level accordion menu using only HTML and CSS
 I spent a couple of weeks trying out various accordion menu implementations. Editing them, adapting them and giving up on them. The website, CSS Scripts, has a multi-level menu that met all of my requirements and forms the basis of this instructable.
 
 <b>Installation</b></br>
-index.html goes in the main directory. Two subdirectories are required: css and img. Download style.css into css directory, and tv.png into img. To run the menu, either 
+Download index.html goes in any directory. On a linux system, download to /var/www. Two subdirectories are required: css and img. Download style.css into css directory, and tv.png into img. To run the menu, either 
 <ul><li>double click on index.html, or</li>
 <li>select index.html, right click, and open with the browser of your choice.</li></ul> 
 
