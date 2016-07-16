@@ -19,7 +19,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Garage Opener</title>
-	<title>Accordion Menu</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -28,7 +27,7 @@
 	<div class="site-header-div">
 		<div class="site-header-table">
 			<td><img class="site-header-icon" src="img/raspberry-pi.png" ></td>
-			<td><a class="site-header-text" href="http://www.instructables.com">Accordion Menu</a></td>
+			<td><a class="site-header-text" href="/index.php">Home Automation</a></td>
 			<td><img class="site-header-menu" src="img/menu-icon.png"></td>
 		</div> 
 	</div>
@@ -36,7 +35,6 @@
 	<div>
 	<nav class="nav" role="navigation">
 		<ul class="nav__list">
-			<li><a href="/index.php">Home Automation<xx class="value">></xx></a></li>
 <?php
 if ($switch == 1) {
 	echo "<li><a href=\"#\">Garage Door<xx class=\"value\">closed</xx></a></li>";
